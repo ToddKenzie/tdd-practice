@@ -27,13 +27,13 @@ public class BabysitterTest {
 	}
 	
 	@Test
-	public void getPaid12For1HourOfWork() {
+	public void getPaid12For1HourOfPreBedWork() {
 		int cash = sitter.returnPay("5:00 PM", "6:00 PM");
 		assertEquals(12, cash);
 	}
 	
 	@Test
-	public void getPaid24For2HoursOfWork() {
+	public void getPaid24For2HoursOfPreBedWork() {
 		int cash = sitter.returnPay("5:00 PM", "7:00 PM");
 		assertEquals(24, cash);
 	}
