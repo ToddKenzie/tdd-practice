@@ -5,20 +5,6 @@ import org.junit.Test;
 
 public class BabysitterTest {
 
-	
-	/*The babysitter 
-	- starts no earlier than 5:00PM
-	- leaves no later than 4:00AM
-	- gets paid $12/hour from start-time to bedtime
-	- gets paid $8/hour from bedtime (9pm) to midnight
-	- gets paid $16/hour from midnight to end of job
-	- gets paid for full hours (no fractional hours)
-
-
-	Feature:
-	As a babysitter
-	In order to get paid for 1 night of work
-	I want to calculate my nightly charge*/
 	Babysitter sitter;
 	
 	@Before
@@ -53,6 +39,49 @@ public class BabysitterTest {
 	@Test
 	public void getPaid20For1HourPreAnd1HourOfAfterBedWork() {
 		int cash = sitter.returnPay("8:00 PM", "10:00 PM");
+		assertEquals(20, cash);
+	}
+	
+	@Test
+	public void getPaid16For1HourPostMidnight() {
+		int cash = sitter.returnPay("12:00 AM", "1:00 AM");
+		assertEquals(16,  cash);
+	}
+	
+	@Test
+	public void getPaid32For2HoursPostMidnight() {
+		int cash = sitter.returnPay("12:00 AM", "2:00 AM");
+		assertEquals(32, cash);
+	}
+	
+	@Test
+	public void getPaid24For1PostBedAnd1PostMidnight() {
+		int cash = sitter.returnPay("11:00 PM", "1:00 AM");
+		assertEquals(24, cash);
+	}
+	
+	@Test
+	public void getPaid136ForFullShift() {
+		int cash = sitter.returnPay("5:00 PM", "4:00 AM");
+		assertEquals(136, cash);
+	}
+	
+	@Test
+	public void getPaid12forStartLatePreBedHour() {
+		int cash = sitter.returnPay("5:46 PM", "6:00 PM");
+		assertEquals(12, cash);
+	}
+	
+	@Test
+	public void getPaid12forEndEarlyPreBedHour() {
+		int cash = sitter.returnPay("5:00 PM", "5:01 PM");
+		assertEquals(12, cash);
+	}
+	
+	@Test
+	public void getPaid20For1HourPreAnd1HourOfAfterBedWorkWith8PMBed() {
+		sitter.setBedTime("8:00 PM");
+		int cash = sitter.returnPay("7:00 PM", "9:00 PM");
 		assertEquals(20, cash);
 	}
 }
