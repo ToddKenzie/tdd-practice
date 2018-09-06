@@ -5,12 +5,13 @@ public class Babysitter {
 	private int startHour;
 	private int endHour;
 	private int bedHour;
+	private int start;
+	private int end;
+	
 	private final int endShift = 4;
 	private final int startShift = 17;
 	private final int midnightDay2 = 0;
 	private final int midnightDay1 = 24;
-	private int start;
-	private int end;
 
 	public Babysitter() {
 		converter = new BabySitterTimeConversion();
