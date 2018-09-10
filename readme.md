@@ -5,7 +5,7 @@ This repository is for various code katas I worked through, rather than create s
 
 ## Code Katas
 
-**FizzBuzzQix kata**
+### **FizzBuzzQix kata**
 
 *	If the number is divisible by 3, write “Foo” instead of the number
 *	If the number is divisible by 5, add “Bar”
@@ -15,14 +15,14 @@ This repository is for various code katas I worked through, rather than create s
 *	Additional request : we must keep a trace of 0 in numbers, each 0 must be replace par char “ * “.
 
 
-**Roman Numerals**
+### **Roman Numerals**
 
 *	The Kata says you should write a function to convert from normal numbers to Roman Numerals: 
 	*	1 --> I, 10 --> X, 7 --> VII
 *	There is no need to be able to convert numbers larger than about 3000. (The Romans themselves didn’t tend to go any higher)
 
 
-**BabySitter**
+### **BabySitter**
 
 *	This kata simulates a babysitter working and getting paid for one night.  The rules are pretty straight forward:
 
@@ -37,3 +37,10 @@ This repository is for various code katas I worked through, rather than create s
 *Feature:*
 As a babysitter, in order to get paid for 1 night of work, 
 I want to calculate my nightly charge
+
+### **Tennis**
+
+1. A game is won by the first player to have won at least four points in total and at least two points more than the opponent.
+2. The running score of each game is described in a manner peculiar to tennis: scores from zero to three points are described as “love”, “fifteen”, “thirty”, and “forty” respectively.
+3. If at least three points have been scored by each player, and the scores are equal, the score is “deuce”.
+4. If at least three points have been scored by each side and a player has one more point than his opponent, the score of the game is “advantage” for the player in the lead.
