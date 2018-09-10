@@ -11,7 +11,6 @@ This repository is for various code katas I worked through, rather than create s
 *	If the number is divisible by 5, add “Bar”
 *	If the number is divisible by 7, add “Qix”
 *	For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
-
 *	Additional request : we must keep a trace of 0 in numbers, each 0 must be replace par char “ * “.
 
 
